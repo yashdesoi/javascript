@@ -36,12 +36,10 @@ module.exports = {
 
     // Enforce default clauses in switch statements to be last
     // https://eslint.org/docs/rules/default-case-last
-    // TODO: enable, semver-minor, when eslint v7 is required (which is a major)
-    'default-case-last': 'off',
+    'default-case-last': 'error',
 
     // https://eslint.org/docs/rules/default-param-last
-    // TODO: enable, semver-minor, when eslint v6.4 is required (which is a major)
-    'default-param-last': 'off',
+    'default-param-last': 'error',
 
     // encourages use of dot notation whenever possible
     // https://eslint.org/docs/rules/dot-notation
@@ -57,8 +55,7 @@ module.exports = {
 
     // Require grouped accessor pairs in object literals and classes
     // https://eslint.org/docs/rules/grouped-accessor-pairs
-    // TODO: enable in next major, altho the guide forbids getters/setters anyways
-    'grouped-accessor-pairs': 'off',
+    'grouped-accessor-pairs': 'error',
 
     // make sure for-in loops have an if statement
     // https://eslint.org/docs/rules/guard-for-in
@@ -70,6 +67,7 @@ module.exports = {
 
     // disallow the use of alert, confirm, and prompt
     // https://eslint.org/docs/rules/no-alert
+    // TODO: enable, semver-major
     'no-alert': 'warn',
 
     // disallow use of arguments.caller or arguments.callee
@@ -82,8 +80,7 @@ module.exports = {
 
     // Disallow returning value in constructor
     // https://eslint.org/docs/rules/no-constructor-return
-    // TODO: enable, semver-major
-    'no-constructor-return': 'off',
+    'no-constructor-return': 'error',
 
     // disallow division operators explicitly at beginning of regular expression
     // https://eslint.org/docs/rules/no-div-regex
@@ -106,6 +103,11 @@ module.exports = {
     // disallow empty destructuring patterns
     // https://eslint.org/docs/rules/no-empty-pattern
     'no-empty-pattern': 'error',
+
+    // Disallow empty static blocks
+    // https://eslint.org/docs/latest/rules/no-empty-static-block
+    // TODO: semver-major, enable
+    'no-empty-static-block': 'off',
 
     // disallow comparisons to null without a type-checking operator
     // https://eslint.org/docs/rules/no-eq-null
@@ -213,8 +215,7 @@ module.exports = {
 
     // Disallow \8 and \9 escape sequences in string literals
     // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
-    // todo: semver-major: enable when v7.14 is required
-    'no-nonoctal-decimal-escape': 'off',
+    'no-nonoctal-decimal-escape': 'error',
 
     // disallow use of (old style) octal literals
     // https://eslint.org/docs/rules/no-octal
@@ -381,9 +382,15 @@ module.exports = {
     // https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 'off',
 
+    // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
+    // https://eslint.org/docs/rules/prefer-object-has-own
+    // TODO: semver-major: enable thus rule, once eslint v8.5.0 is required
+    'prefer-object-has-own': 'off',
+
     // https://eslint.org/docs/rules/prefer-regex-literals
-    // TODO; enable, semver-minor, once eslint v6.4 is required (which is a major)
-    'prefer-regex-literals': 'off',
+    'prefer-regex-literals': ['error', {
+      disallowRedundantWrapping: true,
+    }],
 
     // require use of the second argument for parseInt()
     // https://eslint.org/docs/rules/radix

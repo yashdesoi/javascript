@@ -77,8 +77,7 @@ module.exports = {
     'eol-last': ['error', 'always'],
 
     // https://eslint.org/docs/rules/function-call-argument-newline
-    // TODO: enable, semver-minor, once eslint v6.2 is required (which is a major)
-    'function-call-argument-newline': ['off', 'consistent'],
+    'function-call-argument-newline': ['error', 'consistent'],
 
     // enforce spacing between functions and their invocations
     // https://eslint.org/docs/rules/func-call-spacing
@@ -101,14 +100,9 @@ module.exports = {
     // TODO: enable
     'func-style': ['off', 'expression'],
 
-    // enforce consistent line breaks inside function parentheses
+    // require line breaks inside function parentheses if there are line breaks between parameters
     // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': ['error', 'consistent'],
-
-    // Blacklist certain identifiers to prevent them being used
-    // https://eslint.org/docs/rules/id-blacklist
-    // TODO: semver-major, remove once eslint v7.4+ is required
-    'id-blacklist': 'off',
+    'function-paren-newline': ['error', 'multiline-arguments'],
 
     // disallow specified identifiers
     // https://eslint.org/docs/rules/id-denylist
@@ -195,6 +189,13 @@ module.exports = {
     'lines-around-directive': ['error', {
       before: 'always',
       after: 'always',
+    }],
+
+    // Require or disallow logical assignment logical operator shorthand
+    // https://eslint.org/docs/latest/rules/logical-assignment-operators
+    // TODO, semver-major: enable
+    'logical-assignment-operators': ['off', 'always', {
+      enforceForIfStatements: true,
     }],
 
     // specify the maximum depth that blocks can be nested
@@ -357,7 +358,8 @@ module.exports = {
     ],
 
     // disallow space between function identifier and application
-    'no-spaced-func': 'error',
+    // deprecated in favor of func-call-spacing
+    'no-spaced-func': 'off',
 
     // disallow tab characters entirely
     'no-tabs': 'error',
@@ -441,8 +443,7 @@ module.exports = {
 
     // Disallow the use of Math.pow in favor of the ** operator
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
-    // TODO: enable, semver-major when eslint 5 is dropped
-    'prefer-exponentiation-operator': 'off',
+    'prefer-exponentiation-operator': 'error',
 
     // Prefer use of an object spread over Object.assign
     // https://eslint.org/docs/rules/prefer-object-spread

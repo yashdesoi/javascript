@@ -1,3 +1,36 @@
+19.0.4 / 2021-12-25
+==================
+ - republish to fix #2529
+
+19.0.3 / 2021-12-24
+==================
+ - [patch] set `namedComponents` option to match style guide
+ - [deps] update `eslint-plugin-react`
+
+19.0.2 / 2021-12-02
+==================
+ - [meta] fix "exports" path (#2525)
+ - [Tests] re-enable tests disabled for the eslint 8 upgrade
+
+19.0.1 / 2021-11-22
+==================
+ - [fix] `whitespace`: update to support eslint 8 (#2517)
+ - [deps] update `eslint-plugin-react`
+ - [dev deps] update `tape`
+
+19.0.0 / 2021-11-10
+==================
+ - [breaking] support `eslint` 8; drop `eslint` < 7
+ - [patch] Explain why `react/jsx-key` is turned off (#2474)
+ - [fix] bump eslint-plugin-react-hooks peer dependency version (#2356)
+ - [patch] Alphabetize the rules for react-a11y.js (#2407)
+ - [Docs] HTTP => HTTPS (#2489)
+ - [readme] clarify hooks requirement (#2482)
+ - [deps] update `eslint-config-airbnb-base`, `eslint-plugin-jsx-a11y`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `safe-publish-latest`,  `eslint-plugin-import`, `object.entries`
+ - [meta] add `--no-save` to link scripts
+ - [meta] use `prepublishOnly` script for npm 7+
+ - [dev deps] update `@babel/runtime`, `tape`
+
 18.2.1 / 2020-11-06
 ==================
  - [patch] remove deprecated `jsx-a11y/accessible-emoji` rule (#2322)
@@ -434,11 +467,11 @@
 [space-in-parens]: https://eslint.org/docs/rules/space-in-parens
 [template-curly-spacing]: https://eslint.org/docs/rules/template-curly-spacing
 
-[react/jsx-space-before-closing]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-[react/sort-comp]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-[react/display-name]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
-[react/jsx-no-bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-[react/no-is-mounted]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
-[react/prefer-es6-class]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
-[react/jsx-quotes]: https://github.com/yannickcr/eslint-plugin-react/blob/f817e37beddddc84b4788969f07c524fa7f0823b/docs/rules/jsx-quotes.md
-[react/prefer-stateless-function]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
+[react/jsx-space-before-closing]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/jsx-space-before-closing.md
+[react/sort-comp]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/sort-comp.md
+[react/display-name]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/display-name.md
+[react/jsx-no-bind]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/jsx-no-bind.md
+[react/no-is-mounted]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/no-is-mounted.md
+[react/prefer-es6-class]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/prefer-es6-class.md
+[react/jsx-quotes]: https://github.com/jsx-eslint/eslint-plugin-react/blob/f817e37beddddc84b4788969f07c524fa7f0823b/docs/rules/jsx-quotes.md
+[react/prefer-stateless-function]: https://github.com/jsx-eslint/eslint-plugin-react/blob/HEAD/docs/rules/prefer-stateless-function.md
